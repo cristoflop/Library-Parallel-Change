@@ -18,6 +18,8 @@ public class Book {
 
 	private int price;
 
+	private double priceFloat;
+
 	public Book() {}
 
 	public Book(String nombre, String description) {
@@ -57,6 +59,14 @@ public class Book {
 
 	public void setPrice(int price) {
 		this.price = price;
+	}
+
+	public double getPriceFloat() {
+		return priceFloat;
+	}
+
+	public void setPriceFloat(double priceFloat) {
+		this.priceFloat = priceFloat;
 	}
 
 	public Long getId() {
