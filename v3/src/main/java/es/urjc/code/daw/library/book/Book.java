@@ -16,8 +16,9 @@ public class Book {
 
 	private String preface;
 
-	private Integer price;
+	private Double price;
 
+	@Transient
 	private Double priceFloat;
 
 	public Book() {}
@@ -53,21 +54,12 @@ public class Book {
 		this.description = preface;
 	}
 
-	public Integer getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
-	public void setPrice(Integer price) {
+	public void setPrice(Double price) {
 		this.price = price;
-	}
-
-	public Double getPriceFloat() {
-		return priceFloat == null ? price : priceFloat;
-	}
-
-	public void setPriceFloat(Double priceFloat) {
-		this.priceFloat = priceFloat;
-		this.price = priceFloat.intValue();
 	}
 
 	public Long getId() {
