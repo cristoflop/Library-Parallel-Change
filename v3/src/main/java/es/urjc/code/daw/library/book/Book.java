@@ -16,6 +16,8 @@ public class Book {
 
 	private String preface;
 
+	private int price;
+
 	public Book() {}
 
 	public Book(String nombre, String description) {
@@ -47,6 +49,14 @@ public class Book {
 	public void setPreface(String preface) {
 		this.preface = preface;
 		this.description = preface;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
 	}
 
 	public Long getId() {
