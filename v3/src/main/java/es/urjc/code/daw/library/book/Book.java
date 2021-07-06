@@ -16,9 +16,9 @@ public class Book {
 
 	private String preface;
 
-	private int price;
+	private Integer price;
 
-	private double priceFloat;
+	private Double priceFloat;
 
 	public Book() {}
 
@@ -53,20 +53,21 @@ public class Book {
 		this.description = preface;
 	}
 
-	public int getPrice() {
+	public Integer getPrice() {
 		return price;
 	}
 
-	public void setPrice(int price) {
+	public void setPrice(Integer price) {
 		this.price = price;
 	}
 
-	public double getPriceFloat() {
-		return priceFloat;
+	public Double getPriceFloat() {
+		return priceFloat == null ? price : priceFloat;
 	}
 
-	public void setPriceFloat(double priceFloat) {
+	public void setPriceFloat(Double priceFloat) {
 		this.priceFloat = priceFloat;
+		this.price = priceFloat.intValue();
 	}
 
 	public Long getId() {
